@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@layer base {
+    body {
+        @apply w-screen overflow-x-hidden font-roboto text-16 font-normal text-text-primary scrollbar-w-2 scrollbar-thumb-text-tertiary scrollbar-thumb-rounded-md;
+    }
+
+    #app {
+        @apply min-h-screen flex flex-col;
+    }
+
+    main {
+        @apply flex-grow;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-lexend;
+    }
+
+    .effect {
+        @apply transition-all duration-200 ease-in-out;
+    }
+
+    .btn-icon {
+        @apply cursor-pointer p-2 rounded-full hover:bg-secondary border border-transparent effect;
+    }
+
+    .btn {
+        @apply cursor-pointer rounded-md p-3 effect hover:bg-secondary border border-transparent text-center;
+    }
+
+    .btn-sm {
+        @apply px-3 py-2;
+    }
+    
+    .btn-primary {
+        @apply bg-primary rounded-md text-white font-medium tracking-wide hover:bg-primary hover:bg-opacity-70;
+    }
+
+    .btn-full {
+        @apply w-full
+    }
+
+    .btn-secondary {
+        @apply border-text-tertiary;
+    }
+
+    .text-underline {
+        @apply inline-block relative before:absolute before:inset-x-0 before:top-full before:h-[1.5px] before:bg-primary;
+    }
+}
